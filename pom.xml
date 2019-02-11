@@ -12,7 +12,7 @@
     <groupId>com.github.tyrion9</groupId>
     <artifactId>mtask-proj</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <modules>
         <module>mtask</module>
@@ -373,7 +373,7 @@
         <connection>scm:git:git://github.com/tyrion9/mtask.git</connection>
         <developerConnection>scm:git:git@github.com:tyrion9/mtask.git</developerConnection>
         <url>https://github.com/tyrion9/mtask</url>
-        <tag>mtask-proj-0.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
 </project>

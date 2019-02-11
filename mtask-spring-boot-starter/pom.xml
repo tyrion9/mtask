@@ -3,7 +3,7 @@
     <parent>
         <artifactId>mtask-proj</artifactId>
         <groupId>com.github.tyrion9</groupId>
-        <version>0.0.1</version>
+        <version>0.0.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,13 +18,13 @@
         <dependency>
             <groupId>com.github.tyrion9</groupId>
             <artifactId>mtask-spring-boot-autoconfigure</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.github.tyrion9</groupId>
             <artifactId>mtask</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
