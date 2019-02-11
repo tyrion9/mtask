@@ -94,5 +94,16 @@ public class SampleApplication {
  - Simple Websocket Client - Chrome Plugin - để xem realtime log
  
 *Real time log*
+![websocket-helloworld](https://user-images.githubusercontent.com/30858651/52554017-1d77e400-2e18-11e9-921d-87245e5ba8e8.PNG)
+
+![websocket-complex](https://user-images.githubusercontent.com/30858651/52554019-1e107a80-2e18-11e9-930e-fc9840df071a.PNG)
 
 *Quản lý list/stop/start/thay đổi tham số*
+```
+curl -X GET http://localhost:8080/api
+
+curl -X POST http://localhost:8080/api/helloworld/stop
+
+curl -X POST http://localhost:8080/api/helloworld/start
+```
+![rest-list](https://user-images.githubusercontent.com/30858651/52554018-1e107a80-2e18-11e9-902b-68365652043b.PNG)
