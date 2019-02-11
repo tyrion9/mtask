@@ -1,0 +1,14 @@
+-   code: helloworld
+    scheduled:
+        period: 1000
+    name: Hello World MTask
+    className: sample.sample1.HelloWorldMTask
+    autoStart: true
+-   code: complex
+    scheduled:
+        period: 1000
+    name: Autowired Param MTask
+    className: sample.sample2.ComplexMTask
+    params:
+        name: HoaiPN
+    autoStart: true
