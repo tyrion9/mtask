@@ -14,11 +14,11 @@ Spring Framework có nhiều các thư viện: Spring Scheduling, Spring Boot Qu
 Xem chi tiết trong *mtask-sample* 
 ### 1. Import thư viện:
 ```maven
-    <dependency>
-        <groupId>com.github.tyrion9</groupId>
-        <artifactId>mtask-spring-boot-starter</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </dependency>
+        <dependency>
+            <groupId>com.github.tyrion9</groupId>
+            <artifactId>mtask-spring-boot-starter</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 ```
 
 ### 2. Viết class extends MTask
