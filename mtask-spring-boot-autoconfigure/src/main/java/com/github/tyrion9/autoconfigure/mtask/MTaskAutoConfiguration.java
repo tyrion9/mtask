@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -20,6 +21,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 @EnableWebSocket
 @EnableScheduling
 @EnableConfigurationProperties(MTaskProperties.class)
+@ComponentScan(basePackages = {"com.github.tyrion9.mtask"})
 public class MTaskAutoConfiguration {
     @Bean
     public MSocketEndpoint mSocketEndpoint() {
