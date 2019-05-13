@@ -1,18 +1,18 @@
 # Managed Task (MTask)
 
-Tiến trình chạy ngầm là bắt buộc với tất cả các ứng dụng cho các doanh nghiệp. 
+Background task is required for every enterprise projects.
 
-Spring Framework có nhiều các thư viện: Spring Scheduling, Spring Boot Quartz...
+Spring Framework support many kind of background tasks: Spring Scheduling, Spring Boot Quartz...
 
-**MTask** dựa trên nền tảng của Spring Boot phát triển thêm các tính năng kế từ thư viện FPTThread.
-- Cho phép đặt lịch (Spring Scheduling theo fixedrate hoặc cron)
-- Stop/Start tiến trình ngầm (Restful API)
-- Thay đổi tham số (Restful API) 
-- Xem log real time (Websocket)
+**MTask** is based on Spring Boot add new feature for monitoring and controlling on the fly.
+- Add/remove Scheduling Task via Rest API (Spring Scheduling theo fixedrate hoặc cron)
+- Stop/start scheduling task via API (Restful API)
+- Change parameter's tasks via API (Restful API) 
+- Monitoring task by realtime log via Websocket
 
-## Cách dùng
-Xem chi tiết trong *mtask-sample* 
-### 1. Import thư viện:
+## Step by step
+More info in *mtask-sample* 
+### 1. Import maven library:
 ```maven
         <dependency>
             <groupId>com.github.tyrion9</groupId>
@@ -21,7 +21,7 @@ Xem chi tiết trong *mtask-sample*
         </dependency>
 ```
 
-### 2. Viết class extends MTask
+### 2. Write a class extends MTask
 
 *HelloWorldMTask*
 ```java
@@ -37,7 +37,7 @@ public class HelloWorldMTask extends MTask {
 }
 ```
 
-*ComplexMTask*: khai báo tham số, autowired bean để sử dụng
+*ComplexMTask*: declare parameters, autowired bean to use
 ```java
 public class ComplexMTask extends MTask {
     private static final Logger log = LoggerFactory.getLogger(ComplexMTask.class);
@@ -58,7 +58,7 @@ public class ComplexMTask extends MTask {
 }
 ```
 
-### 3. Khai báo cấu hình (yaml)
+### 3. declare mtask configuration (yaml)
 ```yaml
 -   code: helloworld
     scheduled:
@@ -88,17 +88,17 @@ public class SampleApplication {
 }
 ```
 
-### 5. Monitor ứng dụng
-***Client quản lý chưa được phát triển nên test thử bằng các tool sau:***
- - Postman để call API quản lý (stop/start/thay đổi tham số)
- - Simple Websocket Client - Chrome Plugin - để xem realtime log
+### 5. Monitor application
+***Client Tool is not developed yet, so use other tool for management:***
+ - Postman call rest API for management (stop/start/change parameters)
+ - Simple Websocket Client - Chrome Plugin - to check log realtime
  
 *Real time log*
 ![websocket-helloworld](https://user-images.githubusercontent.com/30858651/52554017-1d77e400-2e18-11e9-921d-87245e5ba8e8.PNG)
 
 ![websocket-complex](https://user-images.githubusercontent.com/30858651/52554019-1e107a80-2e18-11e9-930e-fc9840df071a.PNG)
 
-*Quản lý list/stop/start/thay đổi tham số*
+*API list/stop/start/change parameters*
 ```
 curl -X GET http://localhost:8080/api
 
